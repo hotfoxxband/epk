@@ -359,27 +359,26 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
-
+//JSON NEWS
 
 fetch('news.json') // Fetch JSON file
     .then(response => response.json()) // Parse JSON
     .then(data => {
         if (data.news && data.news.length > 0) {
-            // Get the first news item
             const latestNews = data.news[0];
 
-            // Insert message into the paragraph element
+            // Insert title and date
             document.getElementById("news-text-title").textContent = latestNews.titlenews;
-            document.getElementById("news-date").textContent = latestNews.date;
-            document.getElementById("news-text-content").textContent = latestNews.message;
+
+            // Convert message array into paragraphs dynamically
+            document.getElementById("news-text-content").innerHTML = latestNews.message
+                .map(paragraph => `<p>${paragraph}</p>`)
+                .join(''); // Joins them into one string
         } else {
             console.error("No news found in JSON.");
         }
-
-        
     })
-    .catch(error => console.error('Error loading JSON:', error)
-  );
+    .catch(error => console.error('Error loading JSON:', error));
   
 
 
