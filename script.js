@@ -63,11 +63,7 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
 
-
-
-
-//////////////////////////////////////////////////////////////////////
-//Fetch json file for shows information
+// Fetch JSON file for shows information
 document.addEventListener("DOMContentLoaded", function () {
   fetch("shows.json")
     .then((response) => response.json())
@@ -76,52 +72,66 @@ document.addEventListener("DOMContentLoaded", function () {
       const upcomingContainer = document.getElementById("upcoming-shows");
 
       const today = new Date();
-
       let nextShowFound = false;
 
       data.forEach((show) => {
         const showDate = new Date(show.date);
-        const showCard = document.createElement("div");
-        showCard.classList.add("show-card");
+        
+        // Create an <a> wrapper for every show
+        const linkWrapper = document.createElement("a");
+        linkWrapper.classList.add("show-card");
+        
+        if (show.link) {
+          linkWrapper.href = show.link; // Use the actual link
+          linkWrapper.target = "_blank"; // Open in a new tab
+        } else {
+          linkWrapper.href = "#shows"; // Keep the user in the section
+        }
 
-        showCard.innerHTML = `
-                    <img src="${show.image}" alt="${show.name}">
-                    <h4>${show.name}</h4>
-                    <p class="pShows">${show.place}</p >
-                    
-                `;
+        // Add the content inside the <a> tag
+        linkWrapper.innerHTML = `
+          <img src="${show.image}" alt="${show.name}">
+          <h4>${show.name}</h4>
+          <p class="pShows">${show.place}</p>
+        `;
 
         if (showDate < today) {
-          showCard.classList.add("past");
-          pastContainer.appendChild(showCard);
+          linkWrapper.classList.add("past");
+          pastContainer.appendChild(linkWrapper);
         } else {
-          showCard.classList.add("upcoming");
-          upcomingContainer.appendChild(showCard);
+          linkWrapper.classList.add("upcoming");
+          upcomingContainer.appendChild(linkWrapper);
 
           if (!nextShowFound) {
-            showCard.classList.add("bounce");
+            linkWrapper.classList.add("bounce");
             nextShowFound = true;
           }
         }
 
-        setTimeout(() => showCard.classList.add("visible"), 200);
+        setTimeout(() => linkWrapper.classList.add("visible"), 200);
       });
     })
     .catch((error) => console.error("Error loading shows:", error));
 });
 
+
+
 //////////////////////////////////////////////////////////////////////
-//Fetch bio content
 fetch("bio") 
-  .then((response) => response.text())
+  .then((response) => response.text()) 
   .then((data) => {
-    document.getElementById("bio-text").textContent = data;
+    // Split the text into paragraphs by detecting line breaks
+    const paragraphs = data.split("\n").filter(p => p.trim() !== "");
+
+    // Convert each paragraph into a <p> tag and insert it into the page
+    document.getElementById("bio-text").innerHTML = paragraphs
+      .map(paragraph => `<p>${paragraph}</p>`)
+      .join(''); // Joins them into a single string
   })
   .catch((error) => {
     document.getElementById("output").textContent = "Error loading bio.";
     console.error("Error fetching file:", error);
   });
-
 
 
 

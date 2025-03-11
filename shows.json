@@ -4,7 +4,8 @@
         "place": "Ovar, Portugal",
         "date": "2025-03-08",
         "time": "22:00",
-        "image": "Images/Shows/Buraco.jpg"
+        "image": "Images/Shows/Buraco.jpg",
+        "link": ""
       },
       
     {
@@ -12,7 +13,8 @@
       "place": "Aveiro, Portugal",
       "date": "2024-12-28",
       "time": "21:30",
-      "image": "Images/Shows/Estaleiro.jpg"
+      "image": "Images/Shows/Estaleiro.jpg",
+      "link": "https://www.instagram.com/p/DElEhcNMDwu/?img_index=1"
     },
     {
       "name": "Rossio",
@@ -32,4 +34,7 @@
 
     
   ]
+  
+
+
   

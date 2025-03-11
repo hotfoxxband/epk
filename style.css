@@ -176,6 +176,7 @@ h5 {
 p {
   font-size: 1rem; /* Adjusted font size for readability */
   margin-top: 0;
+  margin-right: 4px;
   margin-bottom: 20px;
   padding-right: 0px;
   font-family: "Inter", serif;
@@ -186,6 +187,8 @@ p {
   text-justify: inter-word;
   max-width: 100%; /* Prevents the text from overflowing */
   overflow-wrap: break-word; /* Ensures long words break and do not overflow */
+  text-decoration: none;
+
 }
 /* Paragraph */
 .pShows {
@@ -198,6 +201,8 @@ p {
   font-weight: 100;
   font-style: normal;
   margin-top: 5px;
+  text-decoration: none;
+  color: white;
 }
 
 .news-section {
@@ -294,7 +299,7 @@ p {
 }
 
 .scroller {
-  max-height: 200px;
+  max-height: 80%;
   overflow-x: hidden;
   overflow-y: auto; /* Prevent text from spilling out */
   /* width */
@@ -695,6 +700,8 @@ p {
   opacity: 0;
   transition: opacity 0.5s ease-in-out, transform 0.3s ease; /* Simplified transition */
   transform-origin: center; /* Ensures scale is from the center */
+  margin-bottom: 10px;
+  text-decoration: none;
 }
 
 .past {
