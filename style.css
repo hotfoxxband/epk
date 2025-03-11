@@ -1,0 +1,1097 @@
+body {
+  margin: 0;
+  background-color: #111;
+  color: white;
+  text-align: center;
+  padding-bottom: 0px;
+  font-family: "Inter", sans-serif;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+:root {
+  --navbariconcolor: rgba(2, 17, 31, 0.7); /* You can change this color easily */
+}
+
+
+/* Style the home section */
+#home {
+  position: relative;
+  height: 100vh; /* Ensure the section takes up the full height of the viewport */
+  overflow: hidden; /* Hide any overflow from the video */
+}
+
+/* Video Background */
+.video-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1; /* Make sure the video stays behind the content */
+}
+
+.video-background video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensure the video covers the entire section without distorting */
+}
+
+/* Positioning the logo */
+.logo-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Centers the logo */
+  text-align: center;
+  width: 100%;
+}
+
+.logo-container img {
+  mix-blend-mode: overlay;
+  opacity: 0.8; /* Adjust for best effect */
+  max-width: 50%;
+  transition: ease-in-out 0.5s;
+}
+
+@media (max-width: 800px) {
+  .logo-container img {
+    max-width: 90%;
+  }
+}
+
+/* Left-side image */
+.image {
+  position: relative;
+  width: 40%; /* Adjust this to control image width */
+  height: 100%;
+  will-change: transform, opacity;
+
+}
+
+.image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  left: 0;
+  will-change: transform, opacity;
+}
+
+.image-align {
+  position: relative;
+  width: 40%; /* Adjust this to control image width */
+  height: 100%;
+  will-change: transform, opacity;
+}
+
+.image-align img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: left center;
+}
+
+@media (max-width: 1000px) {
+  .image-align img {
+    object-position: 20% center; /* This keeps the starting point of the image to the left */
+    left: 0;
+  }
+}
+
+.image-gallery-fixed{
+  opacity: 0;
+  
+}
+.section-content {
+  width: 60%; /* Content section takes up 50% of the width */
+  color: white;
+  text-align: left;
+  justify-content: flex-start; /* Align text to the top */
+  padding: 40px 20px;
+  position: relative;
+  box-sizing: border-box;
+  overflow: visible;
+  height: 100vh;
+}
+
+
+
+
+/* Title */
+h2 {
+  flex: 1;
+  color: #f21e37;
+  font-family: "Inter", serif;
+  font-optical-sizing: auto;
+  font-weight: 900;
+  font-style: normal;
+  font-size: 7.3vw; /* Responsive font-size */
+  margin: 0px;
+  line-height: 1;
+  margin-bottom: 15px;
+}
+h3 {
+  flex: 1;
+  color: #f21e37;
+  font-family: "Inter", serif;
+  font-optical-sizing: auto;
+  font-weight: 900;
+  font-style: normal;
+  font-size: 20px; /* Responsive font-size */
+  margin: 0px;
+  line-height: 1;
+  margin-bottom: 10px;
+  margin-top: 20px;
+}
+
+h4 {
+  flex: 1;
+  color: white;
+  font-family: "Inter", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 3vw; /* Responsive font-size */
+  margin: 0px;
+  line-height: 1;
+  margin-bottom: 15px;
+}
+
+h5 {
+  flex: 1;
+  color: white;
+  font-family: "Inter", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 2vw; /* Responsive font-size */
+  margin: 0px;
+  line-height: 1;
+  margin-bottom: 5px;
+}
+
+/* Paragraph */
+p {
+  font-size: 1rem; /* Adjusted font size for readability */
+  margin-top: 0;
+  margin-bottom: 20px;
+  padding-right: 0px;
+  font-family: "Inter", serif;
+  font-optical-sizing: auto;
+  font-weight: 100;
+  font-style: normal;
+  text-align: justify;
+  text-justify: inter-word;
+  max-width: 100%; /* Prevents the text from overflowing */
+  overflow-wrap: break-word; /* Ensures long words break and do not overflow */
+}
+/* Paragraph */
+.pShows {
+  font-size: 1rem; /* Adjusted font size for readability */
+  margin-top: 0;
+  margin-bottom: 0px;
+  padding-right: 0px;
+  font-family: "Inter", serif;
+  font-optical-sizing: auto;
+  font-weight: 100;
+  font-style: normal;
+  margin-top: 5px;
+}
+
+.news-section {
+  background-color: rgba(17, 17, 17, 1); /* Section background color */
+}
+
+.bio-section {
+  background-color: rgba(17, 17, 17, 1); /* Section background color */
+}
+.shows-section {
+  background-color: rgba(36, 0, 0, 1); /* Section background color */
+}
+.music-section {
+  background-color: #180b3c; /* Section background color */
+}
+.gallery-section {
+  background-color: rgba(17, 17, 17, 1); /* Section background color */
+}
+.video-section {
+  background-color: rgb(110, 0, 68); /* Section background color */
+}
+.contacts-section {
+  background-color: rgba(17, 17, 17, 1); /* Section background color */
+}
+.gradient {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* Gradient overlay */
+.bio-gradient {
+  background: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0),
+    rgba(17, 17, 17, 1)
+  ); /* Adjust transparency & color */
+}
+
+.news-gradient {
+  background: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0),
+    rgba(17, 17, 17, 1)
+  ); /* Adjust transparency & color */
+}
+
+/* Gradient overlay */
+.music-gradient {
+  background: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0),
+    rgba(24, 11, 60, 1)
+  ); /* Adjust transparency & color */
+}
+
+/* Gradient overlay */
+.shows-gradient {
+  background: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0),
+    rgba(36, 0, 0, 1)
+  ); /* Adjust transparency & color */
+}
+
+.gallery-gradient {
+  background: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0),
+    rgba(17, 17, 17, 1)
+  ); /* Adjust transparency & color */
+}
+
+.video-gradient {
+  background: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0),
+    rgb(110, 0, 68,1)
+  ); /* Adjust transparency & color */
+}
+
+.contacts-gradient {
+  background: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0),
+    rgba(17, 17, 17, 1)
+  ); /* Adjust transparency & color */
+}
+
+.player1 {
+  padding-right: 0px;
+}
+
+.scroller {
+  max-height: 200px;
+  overflow-x: hidden;
+  overflow-y: auto; /* Prevent text from spilling out */
+  /* width */
+  &::-webkit-scrollbar {
+    width: 15px;
+  }
+
+
+
+  /* Track */
+  &::-webkit-scrollbar-track {
+    border-radius: 10px;
+  }
+
+  /* Handle */
+  &::-webkit-scrollbar-thumb {
+    background: rgba(51, 51, 51, 0.6);
+    border-radius: 10px;
+  }
+
+  /* Handle on hover */
+  &::-webkit-scrollbar-thumb:hover {
+    background: rgba(51, 51, 51, 0.7);
+  }
+}
+
+.container {
+  padding: 0px;
+  height: 100vh; /* Full viewport height */
+  
+}
+
+
+
+.container-section {
+  display: flex;
+  align-items: flex-start; /* Align items to the top of the page */
+  justify-content: space-between;
+  height: 100vh;
+  padding: 0px;
+  position: relative;
+  overflow: hidden; /* Prevents text from spilling over */
+  flex-wrap: wrap; /* Allow content to wrap on smaller screens */
+}
+
+
+.subsection {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  border: none;
+
+}
+
+
+/* Navbar Container */
+.navbar {
+  position: fixed;
+  bottom: 70px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.5s ease-in-out;
+  z-index: 1000;
+}
+
+/* Social Media Icons */
+.social-icons {
+  display: flex;
+  gap: 15px;
+  transition: opacity 0.2s ease;
+}
+
+.icon {
+  width: 50px;
+  height: 50px;
+  backdrop-filter: blur(2px);
+  background-color: var(--navbariconcolor);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  font-size: 1.5rem;
+  border-radius: 50%;
+  color: white;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.1s ease, background 0.2s ease, opacity 0.1s ease;
+  
+
+  /* Apply soft light blending mode */
+}
+
+/* Hover Effect on Icons */
+.icon:hover {
+  transform: scale(1.08);
+}
+
+/* Instagram */
+.icon.instagram:hover {
+  background: #833ab4;
+  /*background: linear-gradient(to right, #f58529, #833ab4); /* Orange to Purple */
+}
+
+/* Facebook */
+.icon.facebook:hover {
+  background: #3b5998;
+  /*background: linear-gradient(to right, #3b5998, #8b9dc3); /* Soft blue to blue */
+}
+
+/* Spotify */
+.icon.spotify:hover {
+  background: #1db954;
+  /*background: linear-gradient(to right, #1db954, #1ed760); /* Green */
+}
+
+/* YouTube */
+.icon.youtube:hover {
+  background: #ff0000;
+  /*background: linear-gradient(to right, #ff0000, #cc0000); /* Red */
+}
+
+/* Center Button */
+/* Center Button */
+.center-button {
+  width: 70px;
+  height: 70px;
+  backdrop-filter: blur(2px);
+  background-color: var(--navbariconcolor);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  margin: 10px;
+  justify-content: center;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.1s ease, background 0.1s ease;
+  position: relative;
+  z-index: 10;
+  font-size: 3rem;
+  cursor: pointer;
+}
+
+.center-button::before {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 0;
+  backdrop-filter: blur(2px);
+  background-color: var(--navbariconcolor);
+  top: 50%;
+  left: 50%;
+  transform: translate(0%, -50%);
+  transition: width 0.3s ease-in-out, height 0.3s ease-in-out;
+  z-index: -1;
+}
+
+/* Rectangle Appears on Navbar Hover */
+.navbar.hover .center-button::before {
+
+  transform: translate(0%, -50%);
+  transition: width 0.3s ease-in-out, height 0.3s ease-in-out;
+  z-index: -1;
+}
+
+/* Menu Icons - Displayed Over Rectangle */
+.menu-icons {
+  position: absolute;
+  display: flex;
+  justify-content: space-evenly; /* Evenly distribute icons horizontally */
+  align-items: center;
+  transition: opacity 0.2s ease-in-out;
+  opacity: 0;
+  pointer-events: none;
+  z-index: 20; /* Make sure the menu icons are above the rectangle */
+  width: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+
+}
+
+/* Menu icon style */
+.nav-icon {
+
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  font-size: 12px;
+
+  transition: background 0.3s ease, transform 0.2s ease;
+  border-radius: 5px; /* Optional: make them slightly rounded rectangles */
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+  height: 90%;
+  font-family: "Inter", serif;
+  font-optical-sizing: auto;
+  font-weight: 900;
+  font-style: normal;
+  padding: 10px 4px; /* Make icons rectangles */
+  
+}
+
+.nav-icon:nth-child(1) {
+  margin-left: 55px;
+}
+
+
+
+/* Semi-Circle Distribution of Nav Icons */
+/* .nav-icon:nth-child(1) {
+  transform: translate(0px, 0px);
+}
+.nav-icon:nth-child(2) {
+  transform: translate(4px, 0px);
+}
+.nav-icon:nth-child(3) {
+  transform: translate(8px, 0px);
+}
+.nav-icon:nth-child(4) {
+  transform: translate(12px, 0px);
+}
+.nav-icon:nth-child(5) {
+  transform: translate(16px, 0px);
+}
+.nav-icon:nth-child(6) {
+  transform: translate(20px, 0px);
+}
+.nav-icon:nth-child(7) {
+  transform: translate(24px, 0px);
+} */
+
+.navbar.hover.menu-icons {
+  opacity: 1;
+  pointer-events: auto; /* Allow interaction with icons */
+}
+
+.nav-icon:hover {
+
+  transition: background 0.2s ease-in-out;
+}
+
+/* Hover Effects */
+.navbar.hover .center-button {
+  transform: scale(1.2);
+  transform: translateX(-200px);
+
+}
+
+.navbar.hover .social-icons {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.navbar.hover .menu-icons {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.navbar.hover .nav-icon {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* Navbar Bar (Rectangle) */
+.navbar-bar {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 40px; /* Adjust height if needed */
+  backdrop-filter: blur(2px);
+  background-color: var(--navbariconcolor);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Center the rectangle */
+  border-radius: 10px;
+  z-index: -1; /* Ensure it stays behind the menu icons */
+  transition: width 0.3s ease-in-out, height 0.3s ease-in-out;
+}
+
+/* When the navbar is hovered, the rectangle (navbar-bar) should appear */
+.navbar.hover .navbar-bar {
+  width: 460px; /* Make the width of the rectangle larger */
+  transition: width 0.3s ease-in-out, height 0.3s ease-in-out;
+  z-index: -1; /* Keeps the rectangle below the icons */
+}
+
+.nav-icon:hover{
+  background-color: rgba(254, 38, 38, 0.645);
+}
+
+@media (max-width: 768px) {
+  .menu-icons {
+    display: flex;
+    flex-wrap: nowrap; /* Ensure items stay in a row */
+    overflow-x: auto; /* Enable horizontal scrolling */
+    white-space: nowrap; /* Prevent text wrapping */
+    width: 100%; /* Limit width to fit smaller screens */
+    padding: 0px; /* Add some padding for spacing */
+    scrollbar-width: thin; /* Make scrollbar less intrusive */
+  }
+  .navbar.hover .center-button {
+    transform: scale(1.2);
+    transform: translateY(70px);
+    opacity: 1;
+}
+
+  .nav-icon:nth-child(1) {
+    margin-left: 0px;
+  }
+  .menu-icons::-webkit-scrollbar {
+    height: 6px; /* Adjust scrollbar height */
+  }
+
+/* When the navbar is hovered, the rectangle (navbar-bar) should appear */
+.navbar.hover .navbar-bar {
+  width: 100%; /* Make the width of the rectangle larger */
+  transition: width 0.3s ease-in-out, height 0.3s ease-in-out;
+  z-index: -1; /* Keeps the rectangle below the icons */
+}
+  .menu-icons::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.5); /* Make scrollbar visible */
+    border-radius: 10px;
+  }
+  
+  /* Adjust icon spacing for better touch interaction */
+  .nav-icon {
+    font-size: 10px;
+  }
+}
+
+
+.gallery-container {
+  overflow: hidden;
+  white-space: nowrap;
+  position: relative;
+  width: 100%;
+}
+
+.gallery-track {
+  display: flex;
+  gap: 15px;
+  animation: scrollLeft 20s linear infinite;
+}
+
+.gallery-track.dragging {
+    cursor: grabbing;
+  }
+
+.gallery-image {
+  width: 200px; /* Adjust based on your layout */
+  height: auto;
+  border-radius: 10px;
+  transition: all 0.2s ease-in-out;
+}
+
+.gallery-image:hover{
+    transform: scale(1.1);
+}
+
+
+/* Hover effect to pause animation */
+.gallery-container:hover .gallery-track {
+  animation-play-state: paused;
+}
+
+/*----------------------------------------*/
+/*----------------------------------------*/
+/*----------------------------------------*/
+/* SHOWS */
+
+.shows-track {
+  display: flex;
+  gap: 20px;
+  white-space: nowrap;
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+  overflow: visible;
+  transition: transform 0.3s ease-out;
+}
+
+.card-wrapper {
+  position: relative; /* Create a new stacking context for each card */
+  overflow: visible; /* Prevent clipping of the scaling card */
+}
+
+.show-card {
+  border-radius: 10px;
+  padding: 4px;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out, transform 0.3s ease; /* Simplified transition */
+  transform-origin: center; /* Ensures scale is from the center */
+}
+
+.past {
+  width: 90px;
+
+  background: linear-gradient(135deg, rgba(40, 1, 72, 1), rgba(100, 73, 73, 1));
+}
+
+.upcoming {
+  width: 200px;
+  /* Prevents shrinking */
+  background: linear-gradient(135deg, rgba(68, 1, 72, 1), rgba(255, 73, 73, 1));
+}
+
+/* Hover effect */
+.past:hover {
+  animation: enlarge 1s forwards; /* Enlarge the card on hover */
+  z-index: 1; /* Ensure the scaled card is above the others */
+  left: 0; /* Keep it in its original position */
+  transition: transform 0.3s ease; /* Smooth transition for scaling */
+}
+
+.upcoming:hover {
+  animation: enlarge2 1s forwards; /* Enlarge the card on hover */
+  z-index: 1; /* Ensure the scaled card is above the others */
+  left: 0; /* Keep it in its original position */
+  transition: transform 0.3s ease; /* Smooth transition for scaling */
+}
+
+.show-card img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.show-card h4 {
+  margin: 1px 0;
+  font-size: 0.7rem;
+  text-align: left;
+}
+
+.show-card p {
+  font-size: 0.6rem;
+  text-align: left;
+}
+
+/* Fade in effect */
+.show-card.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+/* Bounce animation */
+@keyframes bounce {
+  0%,
+  100% {
+    transform: rotate(-4deg);
+  }
+  50% {
+    transform: rotate(3deg);
+  }
+}
+
+/* Enlarge (scale) animation */
+@keyframes enlarge {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(2);
+  }
+}
+
+/* Enlarge (scale) animation */
+@keyframes enlarge2 {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.7);
+  }
+}
+
+/* Bounce animation */
+.bounce {
+  animation: bounce 1s infinite alternate;
+}
+
+
+
+
+.gallery-container {
+  position: relative;
+  width: 60vw;
+  height: 80vh;
+  max-width: 800px;
+  max-height: 600px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+}
+
+.image-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.image-wrapper img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  display: block;
+  margin: auto; /* Centers the image */
+  transition: opacity 1s ease-in-out;
+  border-radius: 10px;
+}
+
+button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 24px;
+}
+
+#prevBtn {
+  left: 20px;
+}
+
+#nextBtn {
+  right: 20px;
+}
+
+button:hover {
+  background: rgba(0, 0, 0, 0.8);
+}
+
+
+
+
+
+
+
+
+#preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(17, 17, 17, 1); 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+/* Simple Loading Spinner */
+.spinner {
+  width: 50px;
+  height: 50px;
+  border: 5px solid black;
+  border-top: 5px solid crimson;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+
+
+
+.gallery {
+  position: relative;
+  height: 80%;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+  align-items: start;
+
+}
+
+.galleryImage {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  transition: opacity 0.5s ease-in-out;
+  position: absolute;
+  border-radius: 10px; /* Adds rounded corners */
+  transition: opacity 0.5s ease, transform 0.3s ease-in-out; /* Added smooth scaling */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Adds shadow for depth */
+}
+
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 15px; /* Increase clickable area */
+  cursor: pointer;
+  z-index: 2;
+  font-size: 32px; /* Larger font for visibility */
+  user-select: none;
+  transition: opacity 0.3s ease; /* Smoother transition */
+}
+
+.arrow.left {
+  left: 20px; /* Increased space from the left edge */
+}
+
+.arrow.right {
+  right: 20px; /* Increased space from the right edge */
+}
+
+.arrow:hover {
+  opacity: 0.7; /* Adds a subtle effect on hover */
+}
+
+/* Adjust arrow position for smaller screens */
+@media (max-width: 768px) { /* Adjust the max-width to fit your needs */
+  .arrow {
+    top: 60%; /* Move the arrows down to 80% of the container's height */
+    transform: translateY(-50%); /* Adjust to keep the arrows vertically centered within the new position */
+  }
+
+  .arrow.left {
+    left: 10px; /* Optional: adjust left position for smaller screens */
+  }
+
+  .arrow.right {
+    right: 10px; /* Optional: adjust right position for smaller screens */
+  }
+}
+
+
+/* News Ribbon */
+.newsribbon {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 5px 0;
+  z-index: 0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-left: 20px;
+  padding-right: 20px;
+  backdrop-filter: blur(10px);
+}
+
+/* News Title */
+.news-title {
+  font-size: 16px;
+  font-weight: bold;
+  color: #fff;
+  margin-bottom: 5px;
+  white-space: nowrap; /* Prevent text from wrapping to a new line */
+  overflow: hidden; /* Hide overflowing text */
+  text-overflow: ellipsis; /* Add ellipsis if text is too long */
+}
+
+/* News List (news ribbon items) */
+.news-list {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  gap: 10px;
+}
+
+/* News Item (Each link in the news ribbon) */
+.news-item {
+  margin: 0;
+  font-size: 14px;
+  padding: 8px 12px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  flex: 1;
+  max-width: calc(33.333% - 10px);
+  box-sizing: border-box;
+  animation: vibrate 0.3s infinite;
+  white-space: nowrap; /* Prevent text from wrapping */
+  overflow: hidden; /* Hide text that overflows */
+  text-overflow: ellipsis; /* Add ellipsis if text is too long */
+}
+
+/* News Item Link */
+.news-item a {
+  text-decoration: none;
+  color: #fff;
+  display: block;
+  padding: 8px 12px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.news-item a:hover {
+  background-color: #555;
+  transform: scale(1.1);
+}
+
+/* Vibration Keyframe Animation */
+@keyframes vibrate {
+  0% {
+    transform: translateY(0);
+  }
+  25% {
+    transform: translateY(-1px);
+    transform: translateX(-1px);
+    rotate: -1deg;
+  }
+  50% {
+    transform: translateY(2px);
+    transform: translateX(1px);
+    rotate: 1deg;
+  }
+  75% {
+    transform: translateY(-1px);
+    transform: translateX(-2px);
+    rotate: -1deg;
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/* Mobile Styling */
+@media (max-width: 1000px) {
+  .newsribbon {
+    padding: 0px;
+  }
+
+  .news-list {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .news-item {
+    margin-bottom: 0px;
+    max-width: 100%;
+  }
+
+  /* Limit to 1 news item on small screens */
+  .news-list .news-item:nth-child(n+2) {
+    display: none;
+  }
+}
+
+/* Reduce font size on small screens */
+@media (max-width: 500px) {
+  .news-item a {
+    font-size: 12px; /* Reduce font size */
+  }
+
+  .news-title {
+    font-size: 14px; /* Reduce the font size for the title */
+  }
+  p{
+    font-size: 0.8rem;
+  }
+}
+
+
+
+.contacts-icons{
+  color:whitesmoke;
+}
+
+
+
+.contacts-info{
+  color: whitesmoke;
+  text-decoration: none;
+  margin-left: 5px;
+}
+
+
+
+
+

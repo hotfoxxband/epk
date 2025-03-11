@@ -1,0 +1,35 @@
+[      
+          {
+        "name": "Buraco Pub",
+        "place": "Ovar, Portugal",
+        "date": "2025-03-08",
+        "time": "22:00",
+        "image": "images/shows/buraco.jpg"
+      },
+      
+    {
+      "name": "Estaleiro",
+      "place": "Aveiro, Portugal",
+      "date": "2024-12-28",
+      "time": "21:30",
+      "image": "images/shows/estaleiro.jpg"
+    },
+    {
+      "name": "Rossio",
+      "place": "Aveiro, Portugal",
+      "date": "2024-09-19",
+      "time": "16:30",
+      "image": "images/shows/flash.jpg"
+    },
+    {
+      "name": "Clube Galitos",
+      "place": "Aveiro, Portugal",
+      "date": "2024-09-19",
+      "time": "16:30",
+      "image": "images/shows/galitos.jpg"
+    }
+
+
+    
+  ]
+  

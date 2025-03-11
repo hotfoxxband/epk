@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Page Title</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400&display=swap" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Chonburi&family=Inter:ital,opsz,wght@0,14..32,100;1,14..32,100&family=Jaro:opsz@6..72&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap"
+    rel="stylesheet" />
+</head>
+
+<body>
+
+  <div id="preloader">
+    <div class="spinner" id=></div>
+  </div>
+
+  <div class="navbar" id="navbar">
+    <!-- Social Media Icons -->
+    <div class="social-icons">
+      <a href="https://www.instagram.com/__hot.foxx__/" target="_blank" class="icon instagram"><i
+          class="bi bi-instagram"></i></a>
+      <a href="#" class="icon facebook" target="_blank"><i class="bi bi-facebook"></i></a>
+    </div>
+    <div class="center-button " id="center-button" data-target=".home-section">
+      <i class="bi bi-plus-circle" id="center-icon"></i>
+    </div>
+    <div class="navbar-bar">
+    <!-- Page Navigation (Hidden Initially) -->
+      <div class="menu-icons" id="menu-icons">
+        <a  class="nav-icon scroll-to-section" data-target=".news-section" >NEWS</a>
+        <a  class="nav-icon scroll-to-section" data-target=".bio-section" >BIO</a>
+        <a  class="nav-icon scroll-to-section" data-target=".music-section" >MUSIC</a>
+        <a  class="nav-icon scroll-to-section" data-target=".shows-section" >SHOWS</a>
+        <a  class="nav-icon scroll-to-section" data-target=".gallery-section" >PHOTOS</a>
+        <a  class="nav-icon scroll-to-section" data-target=".video-section" >VIDEOS</a>
+        <a  class="nav-icon scroll-to-section" data-target=".contacts-section">CONTACT</a>
+      </div>
+    </div>
+    <div class="social-icons">
+      <a href="#" class="icon spotify" target="_blank"><i class="bi bi-spotify"></i></a>
+      <a href="#" class="icon youtube" target="_blank"><i class="bi bi-youtube"></i></a>
+    </div>
+
+
+  </div>
+
+  <div class="container">
+
+    <section id="home" class="container-section home-section">
+
+
+
+
+      <!-- Video Background -->
+      <div class="video-background">
+        <video autoplay loop muted playsinline>
+          <source src="Videos/C0119.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+      </div>
+
+      <!-- Logo Overlay -->
+      <div class="logo-container">
+        <img id="synthwave-logo" src="images/Logos/Logo - Synthwave.png" alt="Höt Föxx Logo" />
+        <!-- Replace with your actual logo path -->
+      </div>
+
+          <!-- News Ribbon -->
+    <div class="newsribbon">
+
+      <!-- The list of news items -->
+      <div class="news-list" id="news-list">
+        <!-- News items will be inserted here by JavaScript -->
+      </div>
+  </div>
+
+    </section>
+
+
+
+<section id="news" class="container-section news-section">
+  <div class="image-align">
+    <img src="images/Backgrounds/News.jpg" alt="News Image" id="news-image" style="opacity: 0" />
+    <div class="gradient news-gradient"></div>
+  </div>
+  <div class="section-content">
+    <h2 class="title">THE NEWS</h2>
+    <h3 id="news-text-title"></h3>
+    <h5 id="news-date">3-4-2024</h5>
+    <div div class="news-text scroller">
+      <p id="news-text-content"></p>
+    </div>
+    <iframe width="100%" height="400px" src="https://www.youtube.com/embed/PQr19JA48gQ?si=resIbmNZYiqFkjkp" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen style="margin-top: 20px;"></iframe>
+  </div>
+
+</section>
+
+    
+    <section id="bio" class="container-section bio-section">
+      <div class="image">
+        <img src="images/Backgrounds/Bio.jpg" alt="Bio Image" id="bio-image" style="opacity: 0" />
+        <div class="gradient bio-gradient"></div>
+      </div>
+      <div class="section-content">
+        <h2 class="title">WHY WE DO IT?</h2>
+        <div div class="bio-text scroller" style="max-height: 500px;">
+          <p id="bio-text"></p>
+        </div>
+      </div>
+    </section>
+
+    <section id="music" class="container-section music-section">
+      <div class="image">
+        <img src="images/Backgrounds/Music.jpg" alt="Music Image" id="music-image" style="opacity: 0" />
+        <div class="gradient music-gradient"></div>
+      </div>
+      <div class="section-content">
+        <h2 class="title">THE MUSIC</h2>
+        <div class="scroller" style="max-height: 200px">
+          <p>
+            Check out our Spotify playlist for a little taste of the Föxx.
+          </p>
+        </div>
+
+        <div class="player1">
+          <iframe class="player" style="border-radius: 12px; height: 420px; "
+            src="https://open.spotify.com/embed/playlist/3AUZQqpUq0aVHb36narBe9?utm_source=generator&theme=0"
+            width="100%" height="352" frameborder="0" allowfullscreen=""
+            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+        </div>
+      </div>
+    </section>
+
+    <section id="shows" class="container-section shows-section">
+      <div class="image">
+        <img src="images/Backgrounds/Shows.jpg" alt="Show Image" id="shows-image" style="opacity: 0" />
+        <div class="gradient shows-gradient"></div>
+
+      </div>
+      <div class="section-content">
+        <h2 class="title">THE SHOWS</h2>
+        <div class="scroller" style="max-height: 200px">
+          <p style="margin-bottom: 10px">
+            When lights go out, we go all in. Check out our last and upcoming
+            shows.
+          </p>
+        </div>
+
+        <div id="past-shows" class="shows-track scroller">
+          <!-- Past show content will go here -->
+        </div>
+
+        <!-- UPCOMING SHOWS Section -->
+
+        <div id="upcoming-shows" class="shows-track" style="margin-top: 30px">
+          <!-- Upcoming show content will go here -->
+        </div>
+      </div>
+    </section>
+
+    <section id="gallery" class="container-section gallery-section">
+      <div class="image-align" id="image-gallery">
+        <img id="image-gallery-fixed" src="images/Backgrounds/Gallery.jpg" alt="Show Image" style="opacity: 0" />
+        <div class="gradient gallery-gradient"></div>
+
+      </div>
+      <div class="section-content">
+        <h2 class="title">THE GALLERY</h2>
+        <p style="margin-bottom: 10px">
+          Feast your eyes with a fine selection of our best shots. Download them at will!
+        </p>
+
+        <div class="gallery" id="galleryid">
+          <img class="galleryImage" id="galleryImage" src="Images/Gallery/1.jpg" alt="Gallery Image">
+          <button class="arrow left" onclick="changeImage(-1)">&#9665;</button>
+
+          <button class="arrow right" onclick="changeImage(1)">&#9655;</button>
+        </div>
+      </div>
+    </section>
+
+
+    <section id="videos" class="container-section video-section">
+      <div class="image">
+        <img src="images/Backgrounds/Videos.jpg" alt="Video Image" id="video-image" style="opacity: 0" />
+        <div class="gradient video-gradient"></div>
+      </div>
+      <div class="section-content">
+        <h2 class="title">THE VIDEOS</h2>
+        <div class="scroller" style="max-height: 200px">
+          <p>
+            Moves from the crypt.
+          </p>
+        </div>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/PQr19JA48gQ?si=resIbmNZYiqFkjkp" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+
+      </div>
+    </section>
+
+
+    <section id="contacts" class="container-section contacts-section">
+      <div class="image-align">
+        <img src="images/Backgrounds/Contacts.jpg" alt="Contacts Image" id="contacts-image" style="opacity: 0" />
+        <div class="gradient contacts-gradient"></div>
+      </div>
+      <div class="section-content">
+        <h2 class="title">THE CONTACTS</h2>
+        <div class="scroller" style="max-height: 200px">
+          <p>Get in touch with us!</p>
+        </div>
+        <br>
+        <p>
+          <i class="bi bi-envelope-at contacts-icons"></i> 
+          <a href="mailto:hotfoxxband@gmail.com" class="contacts-info"> hotfoxxband@gmail.com </a>
+        </p>
+          <p>
+            <i class="bi bi-instagram contacts-icons"></i> <a href="https://www.instagram.com/__hot.foxx__/" target="_blank" class="contacts-info"> @__hot.foxx__ </a> 
+          </p> 
+          <p>
+            <i class="bi bi-facebook contacts-icons"></i> <a href="https://www.facebook.com/profile.php?id=61563626230972" target="_blank" class="contacts-info"> Höt Föxx </a> 
+          </p>
+          <p>
+            <i class="bi bi-tree"></i> <a href="https://linktr.ee/hot_foxx" target="_blank" class="contacts-info"> @hot.foxx</a> 
+          </p> 
+      </div>
+    </section>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollTrigger.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollToPlugin.min.js"></script>
+  <script src="script.js"></script>
+</body>
+
+</html>
