@@ -4,7 +4,7 @@
         "place": "Ovar, Portugal",
         "date": "2025-03-08",
         "time": "22:00",
-        "image": "images/shows/buraco.jpg"
+        "image": "Images/shows/buraco.jpg"
       },
       
     {
@@ -12,21 +12,21 @@
       "place": "Aveiro, Portugal",
       "date": "2024-12-28",
       "time": "21:30",
-      "image": "images/shows/estaleiro.jpg"
+      "image": "Images/shows/estaleiro.jpg"
     },
     {
       "name": "Rossio",
       "place": "Aveiro, Portugal",
       "date": "2024-09-19",
       "time": "16:30",
-      "image": "images/shows/flash.jpg"
+      "image": "Images/shows/flash.jpg"
     },
     {
       "name": "Clube Galitos",
       "place": "Aveiro, Portugal",
       "date": "2024-09-19",
       "time": "16:30",
-      "image": "images/shows/galitos.jpg"
+      "image": "Images/shows/galitos.jpg"
     }
 
 
