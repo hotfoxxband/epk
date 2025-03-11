@@ -318,6 +318,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   const sections = document.querySelectorAll(".container-section");
 
+ if (window.innerWidth > 800) {
   sections.forEach((section) => {
     ScrollTrigger.create({
       trigger: section,
@@ -332,6 +333,7 @@ document.addEventListener("DOMContentLoaded", function () {
       },
     });
   });
+ }
 
   // Function to smoothly scroll to a section
   function scrollToSection(targetSection) {
