@@ -86,6 +86,20 @@ body::-webkit-scrollbar {
   will-change: transform, opacity;
 }
 
+.image-animate{
+  transition: all 0.5s ease-in-out;
+}
+
+@keyframes flow {
+  0%,
+  100% {
+    object-position: 0% center;
+  }
+  50% {
+    object-position: 100% center;
+  }
+}
+
 .image-align img {
   width: 100%;
   height: 100%;
@@ -97,6 +111,9 @@ body::-webkit-scrollbar {
   .image-align img {
     object-position: 20% center; /* This keeps the starting point of the image to the left */
     left: 0;
+  }
+  .image-animate{
+    animation: flow 20s infinite alternate ease-in-out;
   }
 }
 
@@ -551,7 +568,7 @@ p {
 /* Hover Effects */
 .navbar.hover .center-button {
   transform: scale(1.2);
-  transform: translateX(-200px);
+  transform: translateX(-220px);
 
 }
 
@@ -588,7 +605,7 @@ p {
 
 /* When the navbar is hovered, the rectangle (navbar-bar) should appear */
 .navbar.hover .navbar-bar {
-  width: 460px; /* Make the width of the rectangle larger */
+  width: 480px; /* Make the width of the rectangle larger */
   transition: width 0.3s ease-in-out, height 0.3s ease-in-out;
   z-index: -1; /* Keeps the rectangle below the icons */
 }
@@ -622,7 +639,7 @@ p {
 
 /* When the navbar is hovered, the rectangle (navbar-bar) should appear */
 .navbar.hover .navbar-bar {
-  width: 100%; /* Make the width of the rectangle larger */
+  width: 110%; /* Make the width of the rectangle larger */
   transition: width 0.3s ease-in-out, height 0.3s ease-in-out;
   z-index: -1; /* Keeps the rectangle below the icons */
 }
@@ -1102,3 +1119,44 @@ button:hover {
 
 
 
+    /* Language menu fixed at the top-right */
+    .language-menu {
+      position: fixed;
+      top: 3px;
+      left: 5px;
+      padding: 5px;
+      border-radius: 5px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 50;
+    }
+
+    .language-menu a {
+      display: flex;
+    
+      align-items: center;
+      color: white;
+      text-align: center;
+      padding: 10px 10px;
+      text-decoration: none;
+      border-radius: 5px;
+      background-color: rgba(0, 0, 0, 0.3);
+      backdrop-filter: blur(4px);
+
+    }
+
+    .language-menu a:hover {
+      background-color: rgba(0, 0, 0, 0.5);
+      color: black;
+      
+    }
+
+    .flag {
+      width: 20px; /* Set flag size */
+      height: 15px;
+    }
+
+    .language-menu a + a {
+      margin-left: 5px; /* Add space between flags */
+    }

@@ -27,14 +27,15 @@
     <div class="social-icons">
       <a href="https://www.instagram.com/__hot.foxx__/" target="_blank" class="icon instagram"><i
           class="bi bi-instagram"></i></a>
-      <a href="#" class="icon facebook" target="_blank"><i class="bi bi-facebook"></i></a>
+      <a href="https://www.facebook.com/hotfoxxband" class="icon facebook" target="_blank"><i class="bi bi-facebook"></i></a>
     </div>
-    <div class="center-button " id="center-button" data-target=".home-section">
+    <div class="center-button" id="center-button" data-target=".home-section">
       <i class="bi bi-plus-circle" id="center-icon"></i>
     </div>
     <div class="navbar-bar">
     <!-- Page Navigation (Hidden Initially) -->
       <div class="menu-icons" id="menu-icons">
+        <a  class="nav-icon scroll-to-section" data-target=".home-section" >HOME</a>
         <a  class="nav-icon scroll-to-section" data-target=".news-section" >NEWS</a>
         <a  class="nav-icon scroll-to-section" data-target=".bio-section" >BIO</a>
         <a  class="nav-icon scroll-to-section" data-target=".music-section" >MUSIC</a>
@@ -51,6 +52,17 @@
 
 
   </div>
+
+
+  <div class="language-menu">
+    <a href="#" onclick="reloadWithLanguage('pt')">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/5/5c/Flag_of_Portugal.svg" alt="Portuguese Flag" class="flag">
+    </a>
+    <a href="#" onclick="reloadWithLanguage('en')">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/a/a4/Flag_of_the_United_States.svg" alt="English Flag" class="flag">
+    </a>
+  </div>
+  
 
   <div class="container">
 
@@ -74,7 +86,7 @@
       </div>
 
           <!-- News Ribbon -->
-    <div class="newsribbon">
+      <div class="newsribbon">
 
       <!-- The list of news items -->
       <div class="news-list" id="news-list">
@@ -88,11 +100,11 @@
 
 <section id="news" class="container-section news-section">
   <div class="image-align">
-    <img src="Images/Backgrounds/News.jpg" alt="News Image" id="news-image" style="opacity: 0" />
+    <img src="Images/Backgrounds/News.jpg" alt="News Image" class="image-animate" id="news-image" style="opacity: 0" />
     <div class="gradient news-gradient"></div>
   </div>
   <div class="section-content">
-    <h2 class="title">THE NEWS</h2>
+    <h2 class="title" id="news_title">THE NEWS</h2>
     <h3 id="news-text-title"></h3>
     <div div class="news-text scroller">
       <p id="news-text-content"></p>
@@ -209,7 +221,7 @@
 
     <section id="contacts" class="container-section contacts-section">
       <div class="image-align">
-        <img src="Images/Backgrounds/Contacts.jpg" alt="Contacts Image" id="contacts-image" style="opacity: 0" />
+        <img src="Images/Backgrounds/Contacts.jpg" class="image-animate" alt="Contacts Image" id="contacts-image" style="opacity: 0" />
         <div class="gradient contacts-gradient"></div>
       </div>
       <div class="section-content">

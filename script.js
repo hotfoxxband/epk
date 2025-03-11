@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", function () {
   
   const scrollToSection = "scroll-to-section"; 
   const originalIcon = "bi-plus-circle";
-  const hoverIcon = "bi-house";
+  const hoverIcon = "bi-crosshair";
   
   let isHoveringNavbar = false;
   let isHoveringCenterButton = false;
@@ -268,8 +268,8 @@ function adjustImageSize() {
         galleryImage.style.width = "100%";
         galleryImage.style.height = "auto";
     } else {
-        galleryImage.style.width = "auto";
-        galleryImage.style.height = "100%";
+      galleryImage.style.width = "100%";
+      galleryImage.style.height = "auto";
     }
 }
 
@@ -307,7 +307,7 @@ window.onload = function () {
 
         // Create an anchor tag for each news item
         const link = document.createElement('a');
-        link.target = '_blank'; // Ensure the link opens in a new tab
+        link.href="#news";
         link.textContent = news.title; // Set the text content of the link
         
         // Append the anchor tag to the news item
@@ -391,7 +391,4 @@ fetch('news.json') // Fetch JSON file
     .catch(error => console.error('Error loading JSON:', error));
   
 
-
-  
-  
   
