@@ -27,14 +27,15 @@
     <div class="social-icons">
       <a href="https://www.instagram.com/__hot.foxx__/" target="_blank" class="icon instagram"><i
           class="bi bi-instagram"></i></a>
-      <a href="#" class="icon facebook" target="_blank"><i class="bi bi-facebook"></i></a>
+      <a href="https://www.facebook.com/hotfoxxband" class="icon facebook" target="_blank"><i class="bi bi-facebook"></i></a>
     </div>
-    <div class="center-button " id="center-button" data-target=".home-section">
+    <div class="center-button" id="center-button" data-target=".home-section">
       <i class="bi bi-plus-circle" id="center-icon"></i>
     </div>
     <div class="navbar-bar">
     <!-- Page Navigation (Hidden Initially) -->
       <div class="menu-icons" id="menu-icons">
+        <a  class="nav-icon scroll-to-section" data-target=".home-section" >HOME</a>
         <a  class="nav-icon scroll-to-section" data-target=".news-section" >NEWS</a>
         <a  class="nav-icon scroll-to-section" data-target=".bio-section" >BIO</a>
         <a  class="nav-icon scroll-to-section" data-target=".music-section" >MUSIC</a>
@@ -51,6 +52,17 @@
 
 
   </div>
+
+
+  <div class="language-menu">
+    <a href="#" onclick="reloadWithLanguage('pt')">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/5/5c/Flag_of_Portugal.svg" alt="Portuguese Flag" class="flag">
+    </a>
+    <a href="#" onclick="reloadWithLanguage('en')">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/a/a4/Flag_of_the_United_States.svg" alt="English Flag" class="flag">
+    </a>
+  </div>
+  
 
   <div class="container">
 
@@ -74,7 +86,7 @@
       </div>
 
           <!-- News Ribbon -->
-    <div class="newsribbon">
+      <div class="newsribbon">
 
       <!-- The list of news items -->
       <div class="news-list" id="news-list">
@@ -88,17 +100,17 @@
 
 <section id="news" class="container-section news-section">
   <div class="image-align">
-    <img src="Images/Backgrounds/News.jpg" alt="News Image" id="news-image" style="opacity: 0" />
+    <img src="Images/Backgrounds/News.jpg" alt="News Image" class="image-animate" id="news-image" style="opacity: 0" />
     <div class="gradient news-gradient"></div>
   </div>
   <div class="section-content">
-    <h2 class="title">THE NEWS</h2>
+    <h2 class="title" id="news_title">THE NEWS</h2>
     <h3 id="news-text-title"></h3>
-    <h5 id="news-date">3-4-2024</h5>
     <div div class="news-text scroller">
       <p id="news-text-content"></p>
+      <iframe width="100%" height="400px" src="https://www.youtube.com/embed/PQr19JA48gQ?si=resIbmNZYiqFkjkp" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen style="margin-right: 5px;"></iframe>
+
     </div>
-    <iframe width="100%" height="400px" src="https://www.youtube.com/embed/PQr19JA48gQ?si=resIbmNZYiqFkjkp" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen style="margin-top: 20px;"></iframe>
   </div>
 
 </section>
@@ -150,7 +162,7 @@
         <div class="scroller" style="max-height: 200px">
           <p style="margin-bottom: 10px">
             When lights go out, we go all in. Check out our last and upcoming
-            shows.
+            shows. Click them for pictures!
           </p>
         </div>
 
@@ -195,12 +207,12 @@
       </div>
       <div class="section-content">
         <h2 class="title">THE VIDEOS</h2>
-        <div class="scroller" style="max-height: 200px">
+        <div class="scroller" style="max-height: 80%">
           <p>
             Moves from the crypt.
           </p>
         </div>
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/PQr19JA48gQ?si=resIbmNZYiqFkjkp" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <iframe width="100%" height="315" src="https://www.youtube.com/embed/PQr19JA48gQ?si=resIbmNZYiqFkjkp" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 
       </div>
@@ -209,7 +221,7 @@
 
     <section id="contacts" class="container-section contacts-section">
       <div class="image-align">
-        <img src="Images/Backgrounds/Contacts.jpg" alt="Contacts Image" id="contacts-image" style="opacity: 0" />
+        <img src="Images/Backgrounds/Contacts.jpg" class="image-animate" alt="Contacts Image" id="contacts-image" style="opacity: 0" />
         <div class="gradient contacts-gradient"></div>
       </div>
       <div class="section-content">

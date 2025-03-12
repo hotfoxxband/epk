@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", function () {
   
   const scrollToSection = "scroll-to-section"; 
   const originalIcon = "bi-plus-circle";
-  const hoverIcon = "bi-house";
+  const hoverIcon = "bi-crosshair";
   
   let isHoveringNavbar = false;
   let isHoveringCenterButton = false;
@@ -63,11 +63,7 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
 
-
-
-
-//////////////////////////////////////////////////////////////////////
-//Fetch json file for shows information
+// Fetch JSON file for shows information
 document.addEventListener("DOMContentLoaded", function () {
   fetch("shows.json")
     .then((response) => response.json())
@@ -76,52 +72,66 @@ document.addEventListener("DOMContentLoaded", function () {
       const upcomingContainer = document.getElementById("upcoming-shows");
 
       const today = new Date();
-
       let nextShowFound = false;
 
       data.forEach((show) => {
         const showDate = new Date(show.date);
-        const showCard = document.createElement("div");
-        showCard.classList.add("show-card");
+        
+        // Create an <a> wrapper for every show
+        const linkWrapper = document.createElement("a");
+        linkWrapper.classList.add("show-card");
+        
+        if (show.link) {
+          linkWrapper.href = show.link; // Use the actual link
+          linkWrapper.target = "_blank"; // Open in a new tab
+        } else {
+          linkWrapper.href = "#shows"; // Keep the user in the section
+        }
 
-        showCard.innerHTML = `
-                    <img src="${show.image}" alt="${show.name}">
-                    <h4>${show.name}</h4>
-                    <p class="pShows">${show.place}</p >
-                    
-                `;
+        // Add the content inside the <a> tag
+        linkWrapper.innerHTML = `
+          <img src="${show.image}" alt="${show.name}">
+          <h4>${show.name}</h4>
+          <p class="pShows">${show.place}</p>
+        `;
 
         if (showDate < today) {
-          showCard.classList.add("past");
-          pastContainer.appendChild(showCard);
+          linkWrapper.classList.add("past");
+          pastContainer.appendChild(linkWrapper);
         } else {
-          showCard.classList.add("upcoming");
-          upcomingContainer.appendChild(showCard);
+          linkWrapper.classList.add("upcoming");
+          upcomingContainer.appendChild(linkWrapper);
 
           if (!nextShowFound) {
-            showCard.classList.add("bounce");
+            linkWrapper.classList.add("bounce");
             nextShowFound = true;
           }
         }
 
-        setTimeout(() => showCard.classList.add("visible"), 200);
+        setTimeout(() => linkWrapper.classList.add("visible"), 200);
       });
     })
     .catch((error) => console.error("Error loading shows:", error));
 });
 
+
+
 //////////////////////////////////////////////////////////////////////
-//Fetch bio content
 fetch("bio") 
-  .then((response) => response.text())
+  .then((response) => response.text()) 
   .then((data) => {
-    document.getElementById("bio-text").textContent = data;
+    // Split the text into paragraphs by detecting line breaks
+    const paragraphs = data.split("\n").filter(p => p.trim() !== "");
+
+    // Convert each paragraph into a <p> tag and insert it into the page
+    document.getElementById("bio-text").innerHTML = paragraphs
+      .map(paragraph => `<p>${paragraph}</p>`)
+      .join(''); // Joins them into a single string
   })
   .catch((error) => {
     document.getElementById("output").textContent = "Error loading bio.";
     console.error("Error fetching file:", error);
   });
-
 
 
 
@@ -258,8 +268,8 @@ function adjustImageSize() {
         galleryImage.style.width = "100%";
         galleryImage.style.height = "auto";
     } else {
-        galleryImage.style.width = "auto";
-        galleryImage.style.height = "100%";
+      galleryImage.style.width = "100%";
+      galleryImage.style.height = "auto";
     }
 }
 
@@ -297,7 +307,7 @@ window.onload = function () {
 
         // Create an anchor tag for each news item
         const link = document.createElement('a');
-        link.target = '_blank'; // Ensure the link opens in a new tab
+        link.href="#news";
         link.textContent = news.title; // Set the text content of the link
         
         // Append the anchor tag to the news item
@@ -359,30 +369,26 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
-
+//JSON NEWS
 
 fetch('news.json') // Fetch JSON file
     .then(response => response.json()) // Parse JSON
     .then(data => {
         if (data.news && data.news.length > 0) {
-            // Get the first news item
             const latestNews = data.news[0];
 
-            // Insert message into the paragraph element
+            // Insert title and date
             document.getElementById("news-text-title").textContent = latestNews.titlenews;
-            document.getElementById("news-date").textContent = latestNews.date;
-            document.getElementById("news-text-content").textContent = latestNews.message;
+
+            // Convert message array into paragraphs dynamically
+            document.getElementById("news-text-content").innerHTML = latestNews.message
+                .map(paragraph => `<p>${paragraph}</p>`)
+                .join(''); // Joins them into one string
         } else {
             console.error("No news found in JSON.");
         }
-
-        
     })
-    .catch(error => console.error('Error loading JSON:', error)
-  );
+    .catch(error => console.error('Error loading JSON:', error));
   
 
-
-  
-  
   
