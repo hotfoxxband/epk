@@ -390,5 +390,34 @@ fetch('news.json') // Fetch JSON file
     })
     .catch(error => console.error('Error loading JSON:', error));
   
+    document.addEventListener("DOMContentLoaded", function () {
+      const urlParams = new URLSearchParams(window.location.search);
+      const selectedLanguage = urlParams.get('lang') || localStorage.getItem('preferredLanguage') || 'en'; // Default to English
+    
+      // Automatically load translations for elements with data-translation attributes
+      document.querySelectorAll('[data-translation]').forEach(element => {
+        const jsonFile = element.getAttribute('data-translation');
+        const elementId = element.id;
+        loadTranslation(jsonFile, elementId, selectedLanguage);
+      });
+    });
 
-  
+
+    function loadTranslation(jsonFile, elementId, language) {
+      fetch(jsonFile)
+        .then(response => response.json())
+        .then(translations => {
+          const text = translations[language];
+          if (text) {
+            document.getElementById(elementId).textContent = text;
+          }
+        })
+        .catch(error => console.error(`Error loading ${jsonFile}:`, error));
+    };
+
+    function reloadWithLanguage(language) {
+      localStorage.setItem('preferredLanguage', language); // Save preference
+      const url = new URL(window.location.href);
+      url.searchParams.set('lang', language);
+      window.location.href = url.toString();
+    }
