@@ -390,18 +390,16 @@ fetch('news.json') // Fetch JSON file
     })
     .catch(error => console.error('Error loading JSON:', error));
   
-    document.addEventListener("DOMContentLoaded", function () {
-      const urlParams = new URLSearchParams(window.location.search);
-      const selectedLanguage = urlParams.get('lang') || localStorage.getItem('preferredLanguage') || 'en'; // Default to English
-    
-      // Automatically load translations for elements with data-translation attributes
-      document.querySelectorAll('[data-translation]').forEach(element => {
-        const jsonFile = element.getAttribute('data-translation');
-        const elementId = element.id;
-        loadTranslation(jsonFile, elementId, selectedLanguage);
+    document.addEventListener('DOMContentLoaded', function () {
+      // Add event listeners to language selection elements
+      document.querySelectorAll('.language-menu a').forEach(link => {
+        link.addEventListener('click', function (event) {
+          event.preventDefault(); // Prevent default link behavior
+          const language = this.getAttribute('data-lang'); // Get the selected language
+          reloadWithLanguage(language); // Call the updated function
+        });
       });
     });
-
 
     function loadTranslation(jsonFile, elementId, language) {
       fetch(jsonFile)
@@ -419,8 +417,30 @@ fetch('news.json') // Fetch JSON file
     }
 
     function reloadWithLanguage(language) {
-      localStorage.setItem('preferredLanguage', language); // Save preference
+      // Save the selected language in localStorage
+      localStorage.setItem('preferredLanguage', language);
+    
+      // Update the URL without reloading the page
       const url = new URL(window.location.href);
       url.searchParams.set('lang', language);
-      window.location.href = url.toString();
+      window.history.pushState({}, '', url.toString());
+    
+      // Reload translations for all elements with data-translation attributes
+      document.querySelectorAll('[data-translation]').forEach(element => {
+        const jsonFile = element.getAttribute('data-translation');
+        const elementId = element.id;
+        loadTranslation(jsonFile, elementId, language);
+      });
     }
+
+    document.addEventListener("DOMContentLoaded", function () {
+      const urlParams = new URLSearchParams(window.location.search);
+      const selectedLanguage = urlParams.get('lang') || localStorage.getItem('preferredLanguage') || 'en'; // Default to English
+    
+      // Automatically load translations for elements with data-translation attributes
+      document.querySelectorAll('[data-translation]').forEach(element => {
+        const jsonFile = element.getAttribute('data-translation');
+        const elementId = element.id;
+        loadTranslation(jsonFile, elementId, selectedLanguage);
+      });
+    });
