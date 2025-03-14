@@ -408,12 +408,15 @@ fetch('news.json') // Fetch JSON file
         .then(response => response.json())
         .then(translations => {
           const text = translations[language];
+          const element = document.getElementById(elementId);
           if (text) {
-            document.getElementById(elementId).textContent = text;
+            element.textContent = text;
+          } else {
+            console.warn(`Translation missing for ${elementId} in ${language}`);
           }
         })
         .catch(error => console.error(`Error loading ${jsonFile}:`, error));
-    };
+    }
 
     function reloadWithLanguage(language) {
       localStorage.setItem('preferredLanguage', language); // Save preference
