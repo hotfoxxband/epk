@@ -35,16 +35,16 @@
     <div class="navbar-bar">
     <!-- Page Navigation (Hidden Initially) -->
       <div class="menu-icons" id="menu-icons">
-        <a  class="nav-icon scroll-to-section" data-target=".home-section" >HOME</a>
-        <a  class="nav-icon scroll-to-section" data-target=".news-section" >NEWS</a>
-        <a  class="nav-icon scroll-to-section" data-target=".bio-section" >BIO</a>
-        <a  class="nav-icon scroll-to-section" data-target=".music-section" >MUSIC</a>
-        <a  class="nav-icon scroll-to-section" data-target=".shows-section" >SHOWS</a>
-        <a  class="nav-icon scroll-to-section" data-target=".gallery-section" >PHOTOS</a>
-        <a  class="nav-icon scroll-to-section" data-target=".video-section" >VIDEOS</a>
-        <a  class="nav-icon scroll-to-section" data-target=".contacts-section">CONTACT</a>
+        <a class="nav-icon scroll-to-section" id="menu-home" data-translation="Menu/home.json" data-target=".home-section">HOME</a>
+        <a class="nav-icon scroll-to-section" id="menu-news" data-translation="Menu/news.json" data-target=".news-section">NEWS</a>
+        <a class="nav-icon scroll-to-section" id="menu-bio" data-translation="Menu/bio.json" data-target=".bio-section">BIO</a>
+        <a class="nav-icon scroll-to-section" id="menu-music" data-translation="Menu/music.json" data-target=".music-section">MUSIC</a>
+        <a class="nav-icon scroll-to-section" id="menu-shows" data-translation="Menu/shows.json" data-target=".shows-section">SHOWS</a>
+        <a class="nav-icon scroll-to-section" id="menu-photos" data-translation="Menu/photos.json" data-target=".gallery-section">PHOTOS</a>
+        <a class="nav-icon scroll-to-section" id="menu-videos" data-translation="Menu/videos.json" data-target=".video-section">VIDEOS</a>
+        <a class="nav-icon scroll-to-section" id="menu-contact" data-translation="Menu/contact.json" data-target=".contacts-section">CONTACT</a>
       </div>
-    </div>
+      </div>
     <div class="social-icons">
       <a href="#" class="icon spotify" target="_blank"><i class="bi bi-spotify"></i></a>
       <a href="#" class="icon youtube" target="_blank"><i class="bi bi-youtube"></i></a>
@@ -74,7 +74,7 @@
       <!-- Video Background -->
       <div class="video-background">
         <video autoplay loop muted playsinline>
-          <source src="Videos/C0119.mp4" type="video/mp4" />
+          <source src="Homepage_video/C0119.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
       </div>
@@ -104,10 +104,10 @@
     <div class="gradient news-gradient"></div>
   </div>
   <div class="section-content">
-    <h2 class="title" id="news_title" data-translation="news_title.json"></h2>
-    <h3 id="news-text-title" data-translation="news_text_title.json"></h3>
+    <h2 class="title" id="news_title" data-translation="News/title.json"></h2>
+    <h3 id="news-text-title" data-translation="News/text_title.json"></h3>
     <div div class="news-text scroller">
-      <p id="news-text-content" data-translation="news_text_content.json"></p>
+      <p id="news-text-content" data-translation="News/text_content.json"></p>
       <iframe width="100%" height="400px" src="https://www.youtube.com/embed/PQr19JA48gQ?si=resIbmNZYiqFkjkp" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen style="margin-right: 5px;"></iframe>
 
     </div>
@@ -122,9 +122,9 @@
         <div class="gradient bio-gradient"></div>
       </div>
       <div class="section-content">
-        <h2 class="title" id="bio_title" data-translation="bio_title.json"></h2>
+        <h2 class="title" id="bio_title" data-translation="Bio/title.json"></h2>
         <div div class="bio-text scroller" style="max-height: 500px;">
-          <p id="bio-text" data-translation="bio_text.json"></p>
+          <p id="bio-text" data-translation="Bio/text.json"></p>
         </div>
       </div>
     </section>
@@ -135,9 +135,9 @@
         <div class="gradient music-gradient"></div>
       </div>
       <div class="section-content">
-        <h2 class="title" id="music_title" data-translation="music_title.json"></h2>
+        <h2 class="title" id="music_title" data-translation="Music/title.json"></h2>
         <div class="scroller" style="max-height: 200px">
-          <p id="music-text" data-translation="music_text.json">
+          <p id="music-text" data-translation="Music/text.json">
             Check out our Spotify playlist for a little taste of the Föxx.
           </p>
         </div>
@@ -158,9 +158,9 @@
 
       </div>
       <div class="section-content">
-        <h2 class="title" id="shows_title" data-translation="shows_title.json"></h2>
+        <h2 class="title" id="shows_title" data-translation="Shows/title.json"></h2>
         <div class="scroller" style="max-height: 200px">
-          <p id="shows-text" data-translation="shows_text.json" style="margin-bottom: 10px">
+          <p id="shows-text" data-translation="Shows/text.json" style="margin-bottom: 10px">
           </p>
         </div>
 
@@ -183,8 +183,8 @@
 
       </div>
       <div class="section-content">
-        <h2 class="title" id="gallery_title" data-translation="gallery_title.json"></h2>
-        <p id="gallery-text" data-translation="gallery_text.json" style="margin-bottom: 10px">
+        <h2 class="title" id="gallery_title" data-translation="Gallery/title.json"></h2>
+        <p id="gallery-text" data-translation="Gallery/text.json" style="margin-bottom: 10px">
         </p>
 
         <div class="gallery" id="galleryid">
@@ -203,9 +203,9 @@
         <div class="gradient video-gradient"></div>
       </div>
       <div class="section-content">
-        <h2 class="title" id="videos_title" data-translation="videos_title.json"></h2>
+        <h2 class="title" id="videos_title" data-translation="Videos/title.json"></h2>
         <div class="scroller" style="max-height: 80%">
-          <p id="videos-text" data-translation="videos_text.json">
+          <p id="videos-text" data-translation="Videos/text.json">
           </p>
         </div>
         <iframe width="100%" height="315" src="https://www.youtube.com/embed/PQr19JA48gQ?si=resIbmNZYiqFkjkp" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
@@ -221,9 +221,9 @@
         <div class="gradient contacts-gradient"></div>
       </div>
       <div class="section-content">
-        <h2 class="title" id="contacts_title" data-translation="contacts_title.json"></h2>
+        <h2 class="title" id="contacts_title" data-translation="Contacts/title.json"></h2>
         <div class="scroller" style="max-height: 200px">
-          <p id="contacts-text" data-translation="contacts_text.json"></p>
+          <p id="contacts-text" data-translation="Contacts/text.json"></p>
         </div>
         <br>
         <p>

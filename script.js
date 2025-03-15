@@ -65,7 +65,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 // Fetch JSON file for shows information
 document.addEventListener("DOMContentLoaded", function () {
-  fetch("shows.json")
+  fetch("Shows/shows.json")
     .then((response) => response.json())
     .then((data) => {
       const pastContainer = document.getElementById("past-shows");
@@ -294,7 +294,7 @@ window.onload = adjustImageSize;
 //////////////////////////////////////////////////////////////////////
 //Fetch news for top navbar
 window.onload = function () {
-  fetch('news.json')
+  fetch('ribbon.json')
     .then(response => response.json()) // Parse the JSON data
     .then(data => {
       const newsList = document.getElementById('news-list');
@@ -371,25 +371,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
 //JSON NEWS
 
-fetch('news.json') // Fetch JSON file
-    .then(response => response.json()) // Parse JSON
-    .then(data => {
-        if (data.news && data.news.length > 0) {
-            const latestNews = data.news[0];
-
-            // Insert title and date
-            document.getElementById("news-text-title").textContent = latestNews.titlenews;
-
-            // Convert message array into paragraphs dynamically
-            document.getElementById("news-text-content").innerHTML = latestNews.message
-                .map(paragraph => `<p>${paragraph}</p>`)
-                .join(''); // Joins them into one string
-        } else {
-            console.error("No news found in JSON.");
-        }
-    })
-    .catch(error => console.error('Error loading JSON:', error));
-  
     document.addEventListener('DOMContentLoaded', function () {
       // Add event listeners to language selection elements
       document.querySelectorAll('.language-menu a').forEach(link => {
@@ -405,10 +386,19 @@ fetch('news.json') // Fetch JSON file
       fetch(jsonFile)
         .then(response => response.json())
         .then(translations => {
-          const text = translations[language];
+          const translation = translations[language];
           const element = document.getElementById(elementId);
-          if (text) {
-            element.textContent = text;
+    
+          if (translation) {
+            if (Array.isArray(translation)) {
+              // If the translation is a list of strings, append each as a paragraph
+              element.innerHTML = translation
+                .map(paragraph => `<p>${paragraph}</p>`)
+                .join(''); // Join all paragraphs into a single string
+            } else {
+              // If the translation is a single string, set it as text content
+              element.textContent = translation;
+            }
           } else {
             console.warn(`Translation missing for ${elementId} in ${language}`);
           }
