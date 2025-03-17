@@ -116,25 +116,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
-//////////////////////////////////////////////////////////////////////
-fetch("bio") 
-  .then((response) => response.text()) 
-  .then((data) => {
-    // Split the text into paragraphs by detecting line breaks
-    const paragraphs = data.split("\n").filter(p => p.trim() !== "");
-
-    // Convert each paragraph into a <p> tag and insert it into the page
-    document.getElementById("bio-text").innerHTML = paragraphs
-      .map(paragraph => `<p>${paragraph}</p>`)
-      .join(''); // Joins them into a single string
-  })
-  .catch((error) => {
-    document.getElementById("output").textContent = "Error loading bio.";
-    console.error("Error fetching file:", error);
-  });
-
-
-
 
 //////////////////////////////////////////////////////////////////////
 //Animate section elements
