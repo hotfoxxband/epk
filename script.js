@@ -427,6 +427,11 @@ document.addEventListener("DOMContentLoaded", function () {
       const urlParams = new URLSearchParams(window.location.search);
       const selectedLanguage = urlParams.get('lang') || localStorage.getItem('preferredLanguage') || 'en'; // Default to English
     
+      // Save the default language in localStorage if not already set
+      if (!localStorage.getItem('preferredLanguage')) {
+        localStorage.setItem('preferredLanguage', 'en');
+      }
+    
       // Automatically load translations for elements with data-translation attributes
       document.querySelectorAll('[data-translation]').forEach(element => {
         const jsonFile = element.getAttribute('data-translation');
