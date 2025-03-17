@@ -413,7 +413,7 @@ document.addEventListener("DOMContentLoaded", function () {
       // Update the URL without reloading the page
       const url = new URL(window.location.href);
       url.searchParams.set('lang', language);
-      window.history.pushState({}, '', url.toString());
+      window.history.pushState({}, '', url.pathname + '?' + url.searchParams.toString());
     
       // Reload translations for all elements with data-translation attributes
       document.querySelectorAll('[data-translation]').forEach(element => {
