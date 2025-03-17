@@ -410,11 +410,6 @@ document.addEventListener("DOMContentLoaded", function () {
       // Save the selected language in localStorage
       localStorage.setItem('preferredLanguage', language);
     
-      // Update the URL without reloading the page
-      const url = new URL(window.location.href);
-      url.searchParams.set('lang', language);
-      window.history.pushState({}, '', url.pathname + '?' + url.searchParams.toString());
-    
       // Reload translations for all elements with data-translation attributes
       document.querySelectorAll('[data-translation]').forEach(element => {
         const jsonFile = element.getAttribute('data-translation');
@@ -424,13 +419,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     document.addEventListener("DOMContentLoaded", function () {
-      const urlParams = new URLSearchParams(window.location.search);
-      const selectedLanguage = urlParams.get('lang') || localStorage.getItem('preferredLanguage') || 'en'; // Default to English
-    
-      // Save the default language in localStorage if not already set
-      if (!localStorage.getItem('preferredLanguage')) {
-        localStorage.setItem('preferredLanguage', 'en');
-      }
+      const selectedLanguage = localStorage.getItem('preferredLanguage') || 'en'; // Default to English
     
       // Automatically load translations for elements with data-translation attributes
       document.querySelectorAll('[data-translation]').forEach(element => {
