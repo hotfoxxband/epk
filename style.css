@@ -480,7 +480,6 @@ p {
 
 /* Rectangle Appears on Navbar Hover */
 .navbar.hover .center-button::before {
-
   transform: translate(0%, -50%);
   transition: width 0.3s ease-in-out, height 0.3s ease-in-out;
   z-index: -1;
@@ -639,7 +638,7 @@ p {
 
 /* When the navbar is hovered, the rectangle (navbar-bar) should appear */
 .navbar.hover .navbar-bar {
-  width: 110%; /* Make the width of the rectangle larger */
+  width: 120%; /* Make the width of the rectangle larger */
   transition: width 0.3s ease-in-out, height 0.3s ease-in-out;
   z-index: -1; /* Keeps the rectangle below the icons */
 }
