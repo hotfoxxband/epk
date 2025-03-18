@@ -240,7 +240,7 @@ window.addEventListener("load", function () {
 
 //////////////////////////////////////////////////////////////////////
 //Gallery control
-const images = ["Images/Gallery/1.jpg", "Images/Gallery/2.jpg", "Images/Gallery/3.jpg", "Images/Gallery/4.jpg", "Images/Gallery/5.jpg"];
+const images = ["Images/Gallery/1.jpg", "Images/Gallery/2.jpg", "Images/Gallery/3.jpg", "Images/Gallery/4.jpg", "Images/Gallery/5.jpg","Images/Gallery/6.png","Images/Gallery/7.png","Images/Gallery/8.png"];
 let index = 0;
 const galleryImage = document.getElementById("galleryImage");
 
