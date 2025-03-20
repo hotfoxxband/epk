@@ -279,7 +279,7 @@ window.onload = function () {
     .then(response => response.json()) // Parse the JSON data
     .then(data => {
       const newsList = document.getElementById('news-list');
-      const newsItems = data.news.slice(0, 3); // Limit to 3 items
+      const newsItems = data.news.slice(0, 1); // Limit to 1 item
 
       // Loop through each news item and create a news ribbon item with a link
       newsItems.forEach((news, index) => {
