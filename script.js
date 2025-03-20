@@ -282,20 +282,25 @@ window.onload = function () {
       const newsItems = data.news.slice(0, 3); // Limit to 3 items
 
       // Loop through each news item and create a news ribbon item with a link
-      newsItems.forEach(news => {
+      newsItems.forEach((news, index) => {
         const listItem = document.createElement('div');
         listItem.classList.add('news-item');
 
         // Create an anchor tag for each news item
         const link = document.createElement('a');
-        link.href="#news";
-        link.textContent = news.title; // Set the text content of the link
-        
+        link.href = "#news";
+        link.id = `news-link-${index}`; // Assign a unique ID to each link
+        link.setAttribute('data-translation', news.translationFile); // Set the translation file path
+
         // Append the anchor tag to the news item
         listItem.appendChild(link);
 
         // Append the news item to the news list
         newsList.appendChild(listItem);
+
+        // Load the translation for the link text
+        const selectedLanguage = localStorage.getItem('preferredLanguage') || 'en'; // Default to English
+        loadTranslation(news.translationFile, link.id, selectedLanguage);
       });
     })
     .catch(error => {
