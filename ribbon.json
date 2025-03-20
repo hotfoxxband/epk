@@ -2,12 +2,6 @@
     "news": [
       {
         "translationFile": "Ribbon/news1.json"
-      },
-      {
-        "translationFile": "Ribbon/news2.json"
-      },
-      {
-        "translationFile": "Ribbon/news3.json"
       }
     ]
   }

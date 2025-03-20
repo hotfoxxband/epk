@@ -200,7 +200,7 @@ p {
   font-optical-sizing: auto;
   font-weight: 100;
   font-style: normal;
-  text-align: justify;
+  text-align: left;
   text-justify: inter-word;
   max-width: 100%; /* Prevents the text from overflowing */
   overflow-wrap: break-word; /* Ensures long words break and do not overflow */
