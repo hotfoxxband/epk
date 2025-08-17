@@ -740,13 +740,6 @@ p {
   transition: transform 0.3s ease; /* Smooth transition for scaling */
 }
 
-.upcoming:hover {
-  animation: enlarge2 1s forwards; /* Enlarge the card on hover */
-  z-index: 1; /* Ensure the scaled card is above the others */
-  left: 0; /* Keep it in its original position */
-  transition: transform 0.3s ease; /* Smooth transition for scaling */
-}
-
 .show-card img {
   width: 100%;
   border-radius: 10px;

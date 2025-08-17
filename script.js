@@ -101,11 +101,6 @@ document.addEventListener("DOMContentLoaded", function () {
         } else {
           linkWrapper.classList.add("upcoming");
           upcomingContainer.appendChild(linkWrapper);
-
-          if (!nextShowFound) {
-            linkWrapper.classList.add("bounce");
-            nextShowFound = true;
-          }
         }
 
         setTimeout(() => linkWrapper.classList.add("visible"), 200);
