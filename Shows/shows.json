@@ -39,6 +39,30 @@
       "time": "22:00",
       "image": "Images/Shows/firestation.jpg",
       "link": "https://www.instagram.com/p/DMxRxKvMYUy/"
+    },
+    {
+      "name": "Festival da Interculturalidade",
+      "place": "Aveiro, Portugal",
+      "date": "2025-09-06",
+      "time": "22:00",
+      "image": "Images/Shows/claim.png",
+      "link": "https://www.instagram.com/p/DP2BccZjGSu/?img_index=1"
+    },
+    {
+      "name": "Raízes & Ritmos",
+      "place": "Águas Santas, Portugal",
+      "date": "2025-11-15",
+      "time": "21:30",
+      "image": "Images/Shows/raizes_ritmos.jpg",
+      "link": "https://www.instagram.com/p/DPqxcy-iEnl/"
+    },
+    {
+      "name": "Steel for Fire",
+      "place": "Ovar, Portugal",
+      "date": "2025-11-28",
+      "time": "22:00",
+      "image": "Images/Shows/buraco_ladon.jpg",
+      "link": "https://www.instagram.com/p/DPRbFsPiJrQ/"
     }
     
   ]
