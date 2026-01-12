@@ -1,5 +1,58 @@
-[      
-          {
+[    
+
+    {
+      "name": "Rossio",
+      "place": "Aveiro, Portugal",
+      "date": "2024-09-19",
+      "time": "16:30",
+      "image": "Images/Shows/Flash.jpg",
+      "link": "https://www.instagram.com/p/DArSleKMCQ4/"
+    },
+    {
+      "name": "Steel for Fire",
+      "place": "Ovar, Portugal",
+      "date": "2025-11-28",
+      "time": "22:00",
+      "image": "Images/Shows/buraco_ladon.jpg",
+      "link": "https://www.instagram.com/p/DR-nE6BDC1P/?img_index=1"
+    }, 
+
+      {
+      "name": "Raízes & Ritmos",
+      "place": "Águas Santas, Portugal",
+      "date": "2025-11-15",
+      "time": "21:30",
+      "image": "Images/Shows/raizes_ritmos.jpg",
+      "link": "https://www.instagram.com/p/DR5M8qRjNIC/?img_index=1"
+    },
+
+      {
+      "name": "Festival da Interculturalidade",
+      "place": "Aveiro, Portugal",
+      "date": "2025-09-28",
+      "time": "22:00",
+      "image": "Images/Shows/claim.png",
+      "link": "https://www.instagram.com/p/DP2BccZjGSu/?img_index=1"
+    },
+
+      {
+      "name": "18.º Aniversário Casa Pina",
+      "place": "Aveiro, Portugal",
+      "date": "2025-09-13",
+      "time": "22:00",
+      "image": "Images/Shows/casapina.png",
+      "link": ""
+    },
+  {
+      "name": "Rockin' the Fire Station",
+      "place": "Valadares, Portugal",
+      "date": "2025-09-06",
+      "time": "22:00",
+      "image": "Images/Shows/firestation.jpg",
+      "link": "https://www.instagram.com/p/DOo1j3wDKtO/?img_index=1"
+    },
+
+      {
         "name": "Buraco Pub",
         "place": "Ovar, Portugal",
         "date": "2025-03-08",
@@ -17,54 +70,13 @@
       "link": "https://www.instagram.com/p/DElEhcNMDwu/?img_index=1"
     },
     {
-      "name": "Rossio",
-      "place": "Aveiro, Portugal",
-      "date": "2024-09-19",
-      "time": "16:30",
-      "image": "Images/Shows/Flash.jpg",
-      "link": "https://www.instagram.com/p/DArSleKMCQ4/"
-    },
-    {
       "name": "Clube Galitos",
       "place": "Aveiro, Portugal",
-      "date": "2024-09-19",
+      "date": "2024-08-19",
       "time": "16:30",
       "image": "Images/Shows/Galitos.jpg",
       "link": "https://www.instagram.com/p/C_oEx04M93o/?img_index=1"
-    },
-    {
-      "name": "Rockin' the Fire Station",
-      "place": "Valadares, Portugal",
-      "date": "2025-09-06",
-      "time": "22:00",
-      "image": "Images/Shows/firestation.jpg",
-      "link": "https://www.instagram.com/p/DMxRxKvMYUy/"
-    },
-    {
-      "name": "Festival da Interculturalidade",
-      "place": "Aveiro, Portugal",
-      "date": "2025-09-06",
-      "time": "22:00",
-      "image": "Images/Shows/claim.png",
-      "link": "https://www.instagram.com/p/DP2BccZjGSu/?img_index=1"
-    },
-    {
-      "name": "Raízes & Ritmos",
-      "place": "Águas Santas, Portugal",
-      "date": "2025-11-15",
-      "time": "21:30",
-      "image": "Images/Shows/raizes_ritmos.jpg",
-      "link": "https://www.instagram.com/p/DPqxcy-iEnl/"
-    },
-    {
-      "name": "Steel for Fire",
-      "place": "Ovar, Portugal",
-      "date": "2025-11-28",
-      "time": "22:00",
-      "image": "Images/Shows/buraco_ladon.jpg",
-      "link": "https://www.instagram.com/p/DPRbFsPiJrQ/"
     }
-    
   ]
   
 

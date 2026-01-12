@@ -68,13 +68,15 @@ document.addEventListener("DOMContentLoaded", function () {
   fetch("Shows/shows.json")
     .then((response) => response.json())
     .then((data) => {
+      const newData = data.sort((a, b) => new Date(a.date) - new Date(b.date));
       const pastContainer = document.getElementById("past-shows");
       const upcomingContainer = document.getElementById("upcoming-shows");
 
       const today = new Date();
       let nextShowFound = false;
 
-      data.forEach((show) => {
+      newData.forEach((show) => {
+        
         const showDate = new Date(show.date);
         
         // Create an <a> wrapper for every show

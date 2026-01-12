@@ -696,7 +696,7 @@ p {
 .shows-track {
   display: flex;
   gap: 20px;
-  white-space: nowrap;
+  white-space: wrap;
   position: relative;
   width: 100%;
   margin: 0 auto;
@@ -721,7 +721,7 @@ p {
 }
 
 .past {
-  width: 90px;
+  width: 100px;
 
   background: linear-gradient(135deg, rgba(40, 1, 72, 1), rgba(100, 73, 73, 1));
 }
