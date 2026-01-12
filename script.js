@@ -68,7 +68,7 @@ document.addEventListener("DOMContentLoaded", function () {
   fetch("Shows/shows.json")
     .then((response) => response.json())
     .then((data) => {
-      const newData = data.sort((a, b) => new Date(a.date) - new Date(b.date));
+      const newData = data.sort((a, b) => new Date(b.date) - new Date(a.date));
       const pastContainer = document.getElementById("past-shows");
       const upcomingContainer = document.getElementById("upcoming-shows");
 
