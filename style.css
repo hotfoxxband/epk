@@ -721,8 +721,8 @@ p {
 }
 
 .past {
-  width: 100px;
-
+  width: 200px;
+  min-width: 200px;;
   background: linear-gradient(135deg, rgba(40, 1, 72, 1), rgba(100, 73, 73, 1));
 }
 
